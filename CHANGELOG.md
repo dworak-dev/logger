@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/dworac/logger/compare/v1.0.0...v1.1.0) (2023-05-24)
+
+
+### Features
+
+* added reame ([022b7bd](https://github.com/dworac/logger/commit/022b7bdbf70ffcd325b8d3c06a8b44ec4b4426ba))
+
 ## 1.0.0 (2023-05-24)
 
 
