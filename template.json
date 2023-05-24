@@ -1,0 +1,28 @@
+{
+  "name": "typescript-lib-node",
+  "description": "This template is used to create a TypeScript library targeting Node.js. It includes a minimal test setup using Jest, eslint and other tools.",
+  "commands": [
+    {
+      "name": "yarn",
+      "description": "Install dependencies"
+    },
+    {
+      "name": "yarn start:dev",
+      "description": "Start the application in development mode"
+    },
+    {
+      "name": "yarn build",
+      "description": "Build the application"
+    }
+  ],
+  "secrets": [
+    {
+      "name": "NPM_TOKEN",
+      "description": "This token is used for publishing the package automatically on every release."
+    },
+    {
+      "name": "GITHUB_TOKEN",
+      "description": "This token allows github workflows to publish coverage to any Pull Request made to master and also to allow the release-please workflow to work properly."
+    }
+  ]
+}
