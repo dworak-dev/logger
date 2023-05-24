@@ -5,6 +5,9 @@
  * This is the entry point for the application.
  */
 
-import { sum, ISum } from "./sum";
+import Logger from "./logger";
 
-export { sum, ISum };
+// Logger.logInfo("hey");
+// Logger.logError("hey");
+// Logger.logSuccess("hey");
+export default Logger;
