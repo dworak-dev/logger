@@ -7,8 +7,7 @@
 
 import Logger from "./logger";
 
-Logger.logInfo("hey");
-Logger.logError("hey");
-Logger.logSuccess("hey");
-
+// Logger.logInfo("hey");
+// Logger.logError("hey");
+// Logger.logSuccess("hey");
 export default Logger;
