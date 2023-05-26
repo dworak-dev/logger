@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/dworac/logger/compare/v1.1.0...v1.2.0) (2023-05-26)
+
+
+### Features
+
+* added support in logSuccess and logInfo for multiple parameters ([cc40122](https://github.com/dworac/logger/commit/cc40122de030bd391c094d5ab81524db932cf4a9))
+
 ## [1.1.0](https://github.com/dworac/logger/compare/v1.0.0...v1.1.0) (2023-05-24)
 
 
