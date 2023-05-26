@@ -45,11 +45,11 @@ class Logger {
   /**
    * Logs an info message.
    *
-   * @param {string} message - Message to be printed with blue highlight.
+   * @param {string[]} messages - Messages to be printed with blue highlight.
    */
-  static logInfo(message: string) {
+  static logInfo(...messages: string[]) {
     const prefix = chalk.blue(paddPrefix("[INFO]"));
-    const msg = chalk.white(message);
+    const msg = chalk.white(messages.join(" "));
 
     const log = `${getTimeString()}${prefix}${msg}`;
     console.log(log);
@@ -58,11 +58,11 @@ class Logger {
   /**
    * Logs a success message.
    *
-   * @param {string} message - Message to be printed with green highlight.
+   * @param {string[]} messages - Messages to be printed with green highlight.
    */
-  static logSuccess(message: string) {
+  static logSuccess(...messages: string[]) {
     const prefix = chalk.green(paddPrefix("[SUCCESS]"));
-    const msg = chalk.white(message);
+    const msg = chalk.white(messages.join(" "));
 
     const log = `${getTimeString()}${prefix}${msg}`;
     console.log(log);
