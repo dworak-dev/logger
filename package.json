@@ -18,7 +18,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "publishConfig": {
     "access": "public"
