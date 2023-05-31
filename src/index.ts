@@ -7,8 +7,8 @@
 
 import Logger from "./logger";
 
-// Logger.logInfo("hey", "another");
-// Logger.logError("hey");
-// Logger.logSuccess("hey");
+// Logger.logInfo("first", "second");
+// Logger.logSuccess("first", "second", 2, new Date());
+// Logger.logError("first", "second", new Error("test"));
 
 export default Logger;

@@ -6,28 +6,12 @@
  * This file contains the Logger class.
  */
 import chalk from "chalk";
-
-const padDatePart = (part: number) => {
-  const { length } = part.toString();
-  const padding = 2 - length;
-  return `${"0".repeat(padding)}${part.toString()}`;
-};
-
-const getTimeString = () => {
-  const date = new Date();
-  const hours = padDatePart(date.getHours());
-  const minutes = padDatePart(date.getMinutes());
-  const seconds = padDatePart(date.getSeconds());
-
-  const time = `${hours}:${minutes}:${seconds}`;
-
-  return chalk.gray(`[${time}] `);
-};
+import getTimeString from "./getTimeString";
 
 const paddPrefix = (prefix: string) => {
   const { length } = prefix;
   const padding = 9 - length;
-  return `${" ".repeat(padding)}${prefix} `;
+  return `${" ".repeat(padding)}${prefix}`;
 };
 
 /**
@@ -45,46 +29,40 @@ class Logger {
   /**
    * Logs an info message.
    *
-   * @param {string[]} messages - Messages to be printed with blue highlight.
+   * @param {any[]} messages - Messages to be printed with blue highlight.
    */
-  static logInfo(...messages: string[]) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static logInfo(...messages: any[]) {
     const prefix = chalk.blue(paddPrefix("[INFO]"));
-    const msg = chalk.white(messages.join(" "));
+    const time = chalk.gray(getTimeString());
 
-    const log = `${getTimeString()}${prefix}${msg}`;
-    console.log(log);
+    console.log(time, prefix, ...messages);
   }
 
   /**
    * Logs a success message.
    *
-   * @param {string[]} messages - Messages to be printed with green highlight.
+   * @param {any[]} messages - Messages to be printed with green highlight.
    */
-  static logSuccess(...messages: string[]) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static logSuccess(...messages: any[]) {
     const prefix = chalk.green(paddPrefix("[SUCCESS]"));
-    const msg = chalk.white(messages.join(" "));
+    const time = chalk.gray(getTimeString());
 
-    const log = `${getTimeString()}${prefix}${msg}`;
-    console.log(log);
+    console.log(time, prefix, ...messages);
   }
 
   /**
    * Logs an error message.
    *
-   * @param {string} message - Message to be printed with a red highlight.
+   * @param {any[]} messages - Message to be printed with a red highlight.
    */
-  static logError(message: string | Error) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static logError(...messages: any[]) {
     const prefix = chalk.red(paddPrefix("[ERROR]"));
-    let msg = "";
+    const time = chalk.gray(getTimeString());
 
-    if (typeof message === "string") {
-      msg = chalk.white(message);
-    } else {
-      msg = chalk.white(message.stack || message.message);
-    }
-
-    const log = `${getTimeString()}${prefix}${msg}`;
-    console.log(log);
+    console.log(time, prefix, ...messages);
   }
 }
 
