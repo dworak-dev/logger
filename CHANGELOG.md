@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/dworac/logger/compare/v1.2.0...v1.3.0) (2023-05-31)
+
+
+### Features
+
+* changed multiple commands to be used directly with console.log ([dc5176b](https://github.com/dworac/logger/commit/dc5176b1de6fb302ee0c8c28d5eab56c45faab23))
+
 ## [1.2.0](https://github.com/dworac/logger/compare/v1.1.0...v1.2.0) (2023-05-26)
 
 
